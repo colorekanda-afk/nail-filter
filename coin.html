@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>10円玉でサイズ基準合わせ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    .coin-guide {
+      width: 120px;          /* ← このpxが基準になる */
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255, 165, 0, 0.3); /* 10円っぽい色 */
+      margin: 40px auto;
+      border: 2px solid rgba(255, 165, 0, 0.8);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>10円玉を画面に重ねてください</h2>
+
+<div class="coin-guide"></div>
+
+<p>
+  実物の10円玉をこの円に重ね、<br>
+  大きさが合ったらOKを押してください
+</p>
+
+<button onclick="confirmScale()">OK</button>
+
+<script>
+  function confirmScale() {
+    alert("基準が設定されました！（この円 = 23.5mm）");
+    // 次の計測画面に進ませてもOK
+  }
+</script>
+
+</body>
+</html>
